@@ -101,7 +101,6 @@ fn main() {
     // Ethernetのパケットを生成（54バイトの場合）
     let mut ethernet_frame = MutableEthernetPacket::owned(vec![0u8; 54]).unwrap();
     //let mut ethernet_frame = MutableEthernetPacket::owned(vec![0u8; 1500]).unwrap();
-    //let mut ethernet_frame = MutableEthernetPacket::new(&mut buf[..]).unwrap();
     // loopbackの場合，Ethernet Header 14バイトは0のまま
     if !interface.is_loopback() {
         // loopbackでない場合はMacAddrを指定
